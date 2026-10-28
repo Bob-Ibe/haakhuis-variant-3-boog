@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Verstelwerk op afspraak · Haakhuis Landgraaf</title>
+  <meta name="description" content="Broek inkorten, rits vervangen of iets laten repareren? Kies online een dag en tijd en breng je kleding naar Haakhuis in Landgraaf.">
+  <meta name="theme-color" content="#2f2630">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body data-page="verstelwerk">
+  <header data-site-head></header>
+
+  <main>
+    <section class="page-hero" data-wave="#fff">
+      <span class="bgword" aria-hidden="true">verstel</span>
+      <div class="wrap">
+        <div>
+          <nav class="crumbs" aria-label="Kruimelpad"><a href="index.html">Home</a><span>/</span><span>Verstelwerk</span></nav>
+          <span class="eyebrow">Verstelwerk</span>
+          <h1>Past het net niet? <span>Wij maken het passend.</span></h1>
+          <p class="lead">Broek te lang, rits kapot of een jas die beter mag zitten. Kies een dag waarop we verstellen, breng je kleding langs en haal het weer op als het klaar is.</p>
+          <div class="facts">
+            <span class="pill"><span data-icon="kalender"></span> Op afspraak</span>
+            <span class="pill"><span data-icon="euro"></span> Prijs na het bekijken</span>
+            <span class="pill"><span data-icon="pin"></span> Wachtendonckstraat 28</span>
+          </div>
+          <div class="btn-row"><a class="btn magnetic" href="#boeken">Kies een dag <i>↓</i></a></div>
+        </div>
+        <div class="page-hoop p-verstel" aria-hidden="true">
+          <div class="hoop-ring"><div class="hoop-fabric"><img class="hoop-figure" src="assets/img/gen/pop-verstel.png" alt="" loading="lazy"></div><div class="hoop-wood"></div><div class="hoop-screw"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Wat we doen ============ -->
+    <section class="section section-white">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Wat je kunt brengen</span>
+          <h2>Van zoom tot voering</h2>
+          <p class="lead">Twijfel je of iets te repareren is? Neem het gewoon mee. We kijken er samen met jou naar en vertellen eerlijk wat het kost.</p>
+        </div>
+        <div class="services" data-reveal>
+          <div class="service"><span class="ic" data-icon="schaar"></span><b>Broeken en jeans inkorten</b></div>
+          <div class="service"><span class="ic" data-icon="rits"></span><b>Ritsen vervangen</b></div>
+          <div class="service"><span class="ic" data-icon="naald"></span><b>Innemen en uitleggen</b></div>
+          <div class="service"><span class="ic" data-icon="jurk"></span><b>Zomen van jurken en rokken</b></div>
+          <div class="service"><span class="ic" data-icon="jas"></span><b>Mouwen en voering van jassen</b></div>
+          <div class="service"><span class="ic" data-icon="knoop"></span><b>Knopen, drukkers en kleine reparaties</b></div>
+          <div class="service"><span class="ic" data-icon="carnaval"></span><b>Carnavalspak aanpassen</b></div>
+          <div class="service"><span class="ic" data-icon="haak"></span><b>Gehaakt of gebreid werk herstellen</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Boekmodule ============ -->
+    <section class="section section-tint" id="boeken">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Afspraak maken</span>
+          <h2>Kies je dag en tijd</h2>
+          <p class="lead">Op de groene dagen verstellen we. Je aanvraag gaat als bericht naar ons toe, en wij bevestigen je afspraak.</p>
+        </div>
+
+        <div class="booker" id="verstelBooker">
+          <div class="panel">
+            <ol class="stepper" aria-label="Stappen">
+              <li><button type="button"><span>1. Klus</span></button></li>
+              <li><button type="button"><span>2. Dag en tijd</span></button></li>
+              <li><button type="button"><span>3. Gegevens</span></button></li>
+              <li><button type="button"><span>4. Versturen</span></button></li>
+            </ol>
+            <form id="verstelForm" novalidate onsubmit="return false">
+              <div class="bstep">
+                <h3>Wat moet er gebeuren?</h3>
+                <p class="muted">Kies alles wat van toepassing is.</p>
+                <div class="chips" id="soorten"></div>
+                <div class="field" style="margin-top:18px"><label for="toelichting">Toelichting <small>(optioneel)</small></label><textarea id="toelichting" name="toelichting" rows="3" placeholder="Bijvoorbeeld: twee jeans, ongeveer 3 cm korter"></textarea></div>
+                <div class="bnav"><span></span><button type="button" class="btn" id="toStep2" disabled>Volgende <i>→</i></button></div>
+              </div>
+
+              <div class="bstep">
+                <h3>Wanneer kom je langs?</h3>
+                <p class="muted">Kies eerst een dag, daarna een tijd.</p>
+                <div class="cal" id="cal"></div>
+                <h4 id="slotsTitle" style="margin:22px 0 8px;font-size:15px">Kies eerst een dag</h4>
+                <div class="slots" id="slots"><div class="slots-empty" style="grid-column:1/-1">De tijden verschijnen zodra je een dag kiest.</div></div>
+                <div class="bnav"><button type="button" class="btn btn-ghost" id="back1">← Terug</button><button type="button" class="btn" id="toStep3" disabled>Volgende <i>→</i></button></div>
+              </div>
+
+              <div class="bstep">
+                <h3>Hoe kunnen we je bereiken?</h3>
+                <p class="muted">Telefoon of e-mail is genoeg, allebei mag ook.</p>
+                <div class="fields">
+                  <div class="field"><label for="v-naam">Naam</label><input id="v-naam" name="naam" autocomplete="name" required><span class="err">Vul je naam in</span></div>
+                  <div class="field"><label for="v-tel">Telefoon</label><input id="v-tel" name="telefoon" type="tel" autocomplete="tel" inputmode="tel"><span class="err">Vul een telefoonnummer of e-mail in</span></div>
+                  <div class="field full"><label for="v-mail">E-mail</label><input id="v-mail" name="email" type="email" autocomplete="email"><span class="err">Vul een geldig e-mailadres of telefoonnummer in</span></div>
+                </div>
+                <div class="bnav"><button type="button" class="btn btn-ghost" id="back2">← Terug</button><button type="button" class="btn" id="toStep4">Controleren <i>→</i></button></div>
+              </div>
+
+              <div class="bstep">
+                <h3>Klopt alles?</h3>
+                <p class="muted">Druk op versturen. Je mailprogramma opent met het bericht al ingevuld, daar druk je nog één keer op versturen.</p>
+                <div class="send-box" id="sendVerstel"></div>
+                <div class="done-msg" id="verstelDone">
+                  <div class="check" data-icon="check"></div>
+                  <b>Bijna klaar</b>
+                  <p class="muted">Verstuur het bericht in je mail. We bevestigen je afspraak zo snel mogelijk.</p>
+                </div>
+                <div class="bnav"><button type="button" class="btn btn-ghost" id="back3">← Aanpassen</button><span></span></div>
+              </div>
+            </form>
+          </div>
+
+          <aside class="summary" aria-live="polite">
+            <div class="summary-card">
+              <h3>Jouw afspraak</h3>
+              <ul class="summary-list" id="sumList"></ul>
+              <p class="summary-note">Betalen gaat in overleg: via een betaalverzoek per mail of WhatsApp, of in het atelier bij het ophalen.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">Vragen over verstelwerk</span>
+          <h2>Handig om te weten</h2>
+        </div>
+        <div class="faq" data-reveal>
+          <details><summary>Wat kost verstelwerk?</summary><div>Elke klus is anders. We bekijken je kledingstuk als je het brengt en noemen dan de prijs. Pas als jij akkoord bent, gaan we aan de slag.</div></details>
+          <details><summary>Moet ik mijn kleding passen?</summary><div>Bij inkorten en innemen is het handig als je het kledingstuk even aantrekt, zodat we kunnen afspelden. Neem bij een broek de schoenen mee die je eronder draagt.</div></details>
+          <details><summary>Hoe snel is het klaar?</summary><div>De meeste klussen zijn binnen een week klaar. In de drukke weken voor carnaval kan het iets langer duren.</div></details>
+          <details><summary>Mijn dag staat er niet tussen. Wat nu?</summary><div>Stuur een mail naar <a data-href="mail" data-fill="email"></a>. Soms kan er buiten de vaste dagen toch iets.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-reviews" aria-label="Google-reviews"><div class="wrap" data-reviews="verstel"></div></section>
+  </main>
+
+  <footer data-site-foot></footer>
+
+  <script src="js/config.js?v=10"></script>
+  <script src="js/main.js?v=10"></script>
+  <script src="js/booking.js?v=10"></script>
+  <script src="js/scenes.js?v=10"></script>
+  <script src="js/fx.js?v=10"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Haakpatronen van Haakhuis</title>
+  <meta name="description" content="Haakpatronen van Haakhuis: kleding en omslagdoeken. In het Nederlands en Engels, te koop via Ravelry.">
+  <meta name="theme-color" content="#2f2630">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body data-page="haakpatronen">
+  <header data-site-head></header>
+
+  <main>
+    <section class="page-hero" data-wave="var(--bg)">
+      <span class="bgword" aria-hidden="true">patronen</span>
+      <div class="wrap">
+        <div>
+          <nav class="crumbs" aria-label="Kruimelpad"><a href="index.html">Home</a><span>/</span><span>Haakpatronen</span></nav>
+          <span class="eyebrow">Haakpatronen</span>
+          <h1>Eigen haakpatronen, <span>ontworpen in Landgraaf</span></h1>
+          <p class="lead">Kleding en omslagdoeken, met duidelijke uitleg in het Nederlands en Engels. Je koopt de patronen veilig via Ravelry en downloadt ze meteen.</p>
+          <div class="btn-row">
+            <a class="btn magnetic" data-ravelry href="#" target="_blank" rel="noopener">Naar de Ravelry-winkel <i>↗</i></a>
+            <a class="btn btn-ghost" href="#alle">Bekijk alle patronen</a>
+          </div>
+        </div>
+        <div class="page-hoop p-haak" aria-hidden="true">
+          <div class="hoop-ring"><div class="hoop-fabric"><img class="hoop-figure" src="assets/img/gen/pop-haken.png" alt="" loading="lazy"></div><div class="hoop-wood"></div><div class="hoop-screw"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Alle patronen ============ -->
+    <section class="section section-tint" id="alle">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Collectie</span>
+          <h2>Alle patronen</h2>
+          <p class="lead">Een selectie uit onze ontwerpen. De volledige collectie vind je op Ravelry.</p>
+        </div>
+        <div class="tabs" id="patTabs" data-tabs="pat" role="tablist" aria-label="Filter patronen"></div>
+        <div class="patterns" id="patterns" data-filter-group="pat"></div>
+      </div>
+    </section>
+
+    <!-- ============ Info ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="info-strip">
+          <div class="info" data-reveal><span class="ic" data-icon="wereld"></span><div><b>Nederlands en Engels</b><p>De meeste patronen zijn er in beide talen, het Engels in UK- en US-termen.</p></div></div>
+          <div class="info" data-reveal><span class="ic" data-icon="check"></span><div><b>Veilig betalen</b><p>Via Ravelry betaal je met PayPal of creditcard en download je het patroon direct.</p></div></div>
+          <div class="info" data-reveal><span class="ic" data-icon="mail"></span><div><b>Vastgelopen?</b><p>Kom je er niet uit in een patroon? Stuur ons een mail, we helpen je graag verder.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Blog ============ -->
+    <section class="section section-white">
+      <div class="wrap">
+        <div class="teaser" data-reveal>
+          <div>
+            <span class="badge">Binnenkort</span>
+            <h2>Gratis patronen en haaktips</h2>
+            <p>Op deze plek komen gratis patronen, haak-samen-acties en tips uit het atelier. Wil je het als eerste weten? Stuur ons een mailtje, dan zetten we je op de lijst.</p>
+            <a class="btn btn-light" href="mailto:info@haakhuis.nl?subject=Hou%20me%20op%20de%20hoogte%20van%20nieuwe%20patronen" style="margin-top:24px">Hou me op de hoogte <i>→</i></a>
+          </div>
+          <div class="teaser-visual" aria-hidden="true">
+            <div class="c-roze"><span data-icon="omslagdoek"></span></div>
+            <div class="c-paars"><span data-icon="tas"></span></div>
+            <div class="c-zand"><span data-icon="trui"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-site-foot></footer>
+
+  <script src="js/config.js?v=10"></script>
+  <script src="js/main.js?v=10"></script>
+  <script src="js/booking.js?v=10"></script>
+  <script src="js/scenes.js?v=10"></script>
+  <script src="js/fx.js?v=10"></script>
+  <script>window.addEventListener('hh:ready', () => document.querySelectorAll('[data-ravelry]').forEach(a => a.href = HH.ravelryWinkel));</script>
+</body>
+</html>
